@@ -27,8 +27,6 @@ import { PortfolioListComponent } from './portfolios/portfolio-list/portfolio-li
 import { PortfolioDetailsComponent } from './portfolios/portfolio-details/portfolio-details.component';
 import { StockHistoryComponent } from './stocks/stock-history/stock-history.component';
 import { SymbolsComponent } from './stocks/symbols/symbols.component';
-import { PerformanceComponent } from './performance/performance.component';
-import { ChartsModule } from 'ng2-charts';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientsListComponent } from './clients/clients-list/clients-list.component';
 import { ClientDetailsComponent } from './clients/client-details/client-details.component';
@@ -44,7 +42,6 @@ import { ClientUiComponent } from './clients/client-ui/client-ui.component';
     PortfolioDetailsComponent,
     StockHistoryComponent,
     SymbolsComponent,
-    PerformanceComponent,
     ClientsComponent,
     ClientsListComponent,
     ClientDetailsComponent,
@@ -63,8 +60,7 @@ import { ClientUiComponent } from './clients/client-ui/client-ui.component';
     EffectsModule.run(PortfolioEffects),
     EffectsModule.run(RiskEffects),
     EffectsModule.run(StockEffects),
-    EffectsModule.run(SymbolEffects),
-    ChartsModule
+    EffectsModule.run(SymbolEffects)
   ],
   providers: [
     PortfolioService,
