@@ -27,8 +27,6 @@ import { PortfolioListComponent } from './portfolios/portfolio-list/portfolio-li
 import { PortfolioDetailsComponent } from './portfolios/portfolio-details/portfolio-details.component';
 import { StockHistoryComponent } from './stocks/stock-history/stock-history.component';
 import { SymbolsComponent } from './stocks/symbols/symbols.component';
-import { PerformanceComponent } from './performance/performance.component';
-import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -39,8 +37,7 @@ import { ChartsModule } from 'ng2-charts';
     PortfolioListComponent,
     PortfolioDetailsComponent,
     StockHistoryComponent,
-    SymbolsComponent,
-    PerformanceComponent
+    SymbolsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,8 +52,7 @@ import { ChartsModule } from 'ng2-charts';
     EffectsModule.run(PortfolioEffects),
     EffectsModule.run(RiskEffects),
     EffectsModule.run(StockEffects),
-    EffectsModule.run(SymbolEffects),
-    ChartsModule
+    EffectsModule.run(SymbolEffects)
   ],
   providers: [
     PortfolioService,
