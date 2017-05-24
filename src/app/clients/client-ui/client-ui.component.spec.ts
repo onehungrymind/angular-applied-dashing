@@ -1,5 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ClientUiComponent } from './client-ui.component';
 
 describe('ClientUiComponent', () => {
@@ -8,6 +12,7 @@ describe('ClientUiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ MaterialModule, BrowserAnimationsModule, FormsModule ],
       declarations: [ ClientUiComponent ]
     })
     .compileComponents();

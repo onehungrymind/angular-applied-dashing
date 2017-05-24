@@ -57,12 +57,12 @@ describe('PortfolioDetailsComponent', () => {
 
   it('#savePortfolio should raise `save` event with currentPortfolio, then call #cancel', () => {
     spyOn(component, 'cancel');
-    const event = {preventDefault: () => {}};
+    const outputPortfolio = { id: 'string', name: 'string', symbol: 'string', risk: 1, active: true };
     let saved: Portfolio;
     component.save.subscribe((portfolio: Portfolio) => saved = portfolio);
-    component.savePortfolio(event);
+    component.savePortfolio(outputPortfolio);
 
     expect(component.cancel).toHaveBeenCalled();
-    expect(saved).toEqual(inputPortfolio);
+    expect(saved).toEqual(outputPortfolio);
   });
 });
