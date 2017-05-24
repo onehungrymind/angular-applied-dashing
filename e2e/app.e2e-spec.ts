@@ -7,8 +7,8 @@ describe('dashing-angular App', () => {
     page = new DashingAngularPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display app title in toolbar', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect<any>(page.getTitleText()).toEqual('Dashing Angular');
   });
 });

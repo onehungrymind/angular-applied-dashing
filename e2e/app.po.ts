@@ -5,7 +5,7 @@ export class DashingAngularPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getTitleText() {
+    return element(by.tagName('md-toolbar')).element(by.css('.title')).getText();
   }
 }
